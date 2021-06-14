@@ -1,5 +1,5 @@
 <?php
-$secretkey = "6Lf6X9waAAAAAP5T8de3obvp2ADM98AXatFjJBwK";
+$secretkey = "";
 $msg = '';
 header('Content-Type: application/json');
 
@@ -11,7 +11,7 @@ function sendMessage($data){
 	$message = $data['comment'];
 	$subject = "Hartley Service Centre";
 
-	$mailTo = "rokas@padarom.lt";
+	$mailTo = "";
 	
 	$headers = 'MIME-Version: 1.0'."\r\n";
 	$headers .= 'Content-type: text/html; charset=utf-8'."\r\n";
