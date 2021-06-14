@@ -1,0 +1,36 @@
+<!DOCTYPE html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"><link rel="manifest" href="/favicon/site.webmanifest"><title>Hartley Service Centre</title><script async defer src="https://www.google.com/recaptcha/api.js"></script><script>window.GOOGLE_MAPS_KEY = 'AIzaSyBqFF6s1Uxb8NXdo-r0VhXsHLshVtJ2KX4';
+      window.RECAPTCHA_KEY = '6Lf6X9waAAAAACGzsveJLdywJ2XKtr7uylEXLh5I';
+      
+      
+      // Add google map script if not exist; if exist, return true
+      window.checkAndAttachMapScript = function (callback) {
+        let scriptId = "map-api-script";
+        let mapAttached = !!document.getElementById(scriptId);
+
+        if (mapAttached) {
+            if (window.google) // Script attached but may not finished loading
+              callback();
+        }
+        else {
+            let script = document.createElement('script');
+            script.id = scriptId;
+            script.defer = true;
+            script.src = 'https://maps.googleapis.com/maps/api/js?key=' + window.GOOGLE_MAPS_KEY + '&libraries=places,geometry&callback=initMap';
+            document.body.appendChild(script);
+        }
+
+        return mapAttached;
+      }
+      window.initMap = function () {
+        const google = window.google
+        const myLatLng = { lat: 50.398251, lng: -4.134770 }
+        const map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: myLatLng
+        })
+        const marker = new google.maps.Marker({
+          position: myLatLng,
+          map,
+          title: 'Hartley Service Centre'
+        })
+      }</script><link href="/css/about.64de32d9.css" rel="prefetch"><link href="/js/about.eb455f6f.js" rel="prefetch"><link href="/css/index.c9f8518c.css" rel="preload" as="style"><link href="/js/chunk-vendors.088cebd1.js" rel="preload" as="script"><link href="/js/index.3c19f30b.js" rel="preload" as="script"><link href="/css/index.c9f8518c.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but Hartley Service Centre doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><script src=""></script><script async defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script><div id="app"></div><script src="/js/chunk-vendors.088cebd1.js"></script><script src="/js/index.3c19f30b.js"></script></body></html>
